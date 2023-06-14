@@ -1,0 +1,244 @@
+%###############################################################################
+% Plantilla de LaTeX para la carátula de los DT
+
+% Adaptada de la carátula de DT que estaba en formato 
+% Word
+
+% Elaborada por: Juan Ignacio Urruty
+
+%###############################################################################
+
+%###############################################################################
+
+% Preambulo - paquetes necesarios para que 'funcione'
+\documentclass[12pt]{article}
+
+% Opcional - tipo de fuente para documento y fórmulas
+% Idealmente, deberían dejar todo con las mismas fuentes
+% Si usan otra fuente que no sea Times New Roman
+% Deberian cambiar esta parte
+\usepackage{times}
+\usepackage{mathptmx}
+
+% En caso de que sea trabajo en español
+\usepackage[spanish]{babel}
+
+% Paquetes que ayudan con las tablas e imágenes
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[labelfont=bf]{caption}
+\usepackage[shortlabels]{enumitem}
+
+
+% Paquete necesario para crear los colores
+\usepackage[svgnames]{xcolor}
+
+% En estas líneas se crean los colores que se usan en la carátula
+% el gris y el rojo
+\definecolor{mygrey}{RGB}{127, 127, 127}
+\definecolor{myred}{RGB}{164, 44, 52}
+
+% Paquete para poder cambiar los márgenes
+% Los márgenes establecidos por las pautas son de 2.5cm
+% No modificar
+\usepackage[a4paper]{geometry}
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+
+% Esto es para modificar el interlineado.
+\usepackage{setspace}
+\onehalfspacing
+
+% Este paquete es para que aparezcan las líneas punteadas en la carátula
+% en la parte de ISSN
+\usepackage[dash,dot]{dashundergaps}
+
+% Este paquete es para poder crear cuadros como el rojo de la carátula
+% Es de mucha utilidad
+\usepackage{mdframed}
+
+
+%###############################################################################
+
+%###############################################################################
+
+\begin{document}
+
+% Esto es para que no se le ponga número a estas páginas y que las mismas no 
+% aparezcan luego en el índice
+\pagestyle{empty}
+\pagenumbering{gobble}
+
+\onehalfspacing
+
+%###############################################################################
+% CARÁTULA
+%###############################################################################
+
+\noindent\makebox[\textwidth]{\includegraphics[scale=0.52]{logos/Logo FCEA - IECON - UDELAR.jpg}}
+
+
+\vspace{7cm}
+
+
+% Esto crea un cuadro de texto con el título del trabajo
+\begin{mdframed}[backgroundcolor=white, linecolor=white, innerleftmargin=4.5cm, innerrightmargin=0.5cm]
+
+% Tamaño de la fuente del titulo
+\large
+
+% Título del trabajo
+\textcolor{mygrey}{Una evaluación del impacto de la plantilla de \LaTeX. Una comparación con la plantilla de Word}
+    
+\end{mdframed}
+
+% Esta línea saca el espacio que quedaba entre los objetos
+\vspace{-0.8cm}
+
+% Esta línea de código traza la línea negra
+\rule{15cm}{0.5pt}
+
+% Esta línea de código crea el cuadro de texto de los nombres
+% autores
+\begin{mdframed}[backgroundcolor=white, linecolor=white, innerleftmargin=4cm, innerrightmargin=0.5cm]
+
+% Tamaño de la fuente del nombre de los autores
+\normalsize
+
+% Esta línea de código es para quitarle la indentación
+% a los nombres y que se alineara mejor con lo de arriba
+\noindent
+
+\vspace{-0.5cm}
+
+% Reemplazar con los nombres y apellidos
+Nombre y apellido autora 1
+
+Nombre y apellido autora 2
+
+Nombre y apellido autora 3
+
+\end{mdframed} 
+
+% Agrega espacio
+\vspace{2cm}
+
+% Esto crea el cuadro de texto con fondo rojo
+\begin{mdframed}[backgroundcolor=myred, linecolor=myred, leftmargin=-40pt, rightmargin=-40pt]
+
+% En esta parte habría que reemplazar por la fecha %
+\hspace{5cm} \textcolor{white}{INSTITUTO DE ECONOMÍA} \hfill \textcolor{white}{Julio 2023} % Acá habría que cambiar    
+\end{mdframed}
+
+\vspace{-0.7cm}
+
+
+% Esto crea el cuadro de texto de serie de documentos
+\begin{mdframed}[backgroundcolor=white, linecolor=white, leftmargin=-40pt, rightmargin=-40pt]
+
+\small
+
+% Acá habría que cambiar el número
+\hspace{5cm} Serie Documentos de Trabajo \hfill DT 05/23 % En esta parte
+
+\end{mdframed}
+
+\vspace{4cm}
+
+\begin{flushright}
+
+ISSN: \dashuline{\, \textcolor{mygrey}{1510-9305}  \, } \quad \quad (en papel)
+
+
+ISSN: \dashuline{ \, \textcolor{mygrey}{1688-5090}  \, } \quad \quad (en línea)
+    
+\end{flushright}    
+
+
+% Salto de página. Dejar este comando
+\newpage
+
+
+%###############################################################################
+% AGRADECIMIENTOS
+%###############################################################################
+
+
+% Esta línea es para que el texto comience más abajo
+\null \vspace{7cm}
+
+% Comentar en el main en caso de no querer escribir agradecimientos. En otro 
+% caso, redactar la dedicatoria luego del comando \small
+\noindent \small  Personas, instituciones u organizaciones que brindaron su apoyo en la elaboración del trabajo o en la formación del autor.
+
+\vspace{1cm}
+
+% Cambiar toda la información después del \small 
+\noindent \small Forma de citación sugerida para este documento: Apellido, N., Apellido, N., y Apellido, N. (Año). Una evaluación del impacto de la plantilla de \LaTeX. Una comparación con la plantilla de Word. Serie Documentos de Trabajo, DT 99/2099. Instituto de Economía, Facultad de Ciencias Económica y Administración, Universidad de la República, Uruguay.
+
+
+\newpage
+
+
+%###############################################################################
+% RESUMEN Y ABSTRACT
+%###############################################################################
+
+% Esa linea es para que las notas al pie aparezcan con un asterisco
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\begin{center}
+
+\large Una evaluación del impacto de la plantilla de \LaTeX. Una comparación con la plantilla de Word
+
+\vspace{7mm}
+
+\small Nombre y apellido autora 1\footnote[1]{Institucion, Email}, Nombre y apellido autora 2\footnote[2]{Institución, Email} y Nombre apellido autora 3\footnote[3]{Institución, Email}
+
+\end{center}
+
+\vspace{0.5cm}
+
+
+% Esta linea es para que el comando \begin{abstract} no ponga otro título
+\renewcommand{\abstractname}{Resumen}
+\begin{abstract}
+
+
+
+\footnotesize  El resumen debe seguir el estilo que generalmente se encuentra en los papers académicos, donde se mencionan los objetivos, metodologías y resultados principales del trabajo. Este apartado debe dar una idea rápida al lector acerca de lo que trata el trabajo, para que este pueda decidir si se ajusta a sus intereses para seguir leyendo.
+
+\vspace{3mm}
+
+Palabras clave: 
+
+\vspace{3mm}
+
+Clasificación JEL:
+
+\end{abstract}
+
+\vspace{0.5cm}
+
+\renewcommand{\abstractname}{Abstract}
+\begin{abstract}
+
+
+
+\footnotesize  El resumen debe seguir el estilo que generalmente se encuentra en los papers académicos, donde se mencionan los objetivos, metodologías y resultados principales del trabajo. Este apartado debe dar una idea rápida al lector acerca de lo que trata el trabajo, para que este pueda decidir si se ajusta a sus intereses para seguir leyendo.
+
+\vspace{3mm}
+
+Keywords:
+
+\vspace{3mm}
+
+JEL classification: 
+
+\end{abstract} 
+
+
+\newpage
+
+
+\end{document}
