@@ -20,6 +20,3 @@ y luego unirla a su pdf. 'Mergeando' los pdf.
 
 - Otra posibilidad es incorporar el código de la plantilla a su documento y
 editarlo desde ahi mismo.
-
-- En caso de querer una plantilla para todo el documento, pueden encontrarla
-en el siguiente repositorio: 
