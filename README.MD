@@ -31,4 +31,4 @@ editarlo desde ahi mismo. No se cuán recomendable o práctica puede resultar es
 
 Esto se puede hacer de la siguiente manera. Se agrega esta línea en donde comience la primera página del otro documento: 
 
-\setcounter{page}{2}
+<center> \setcounter{page}{2} </center>
