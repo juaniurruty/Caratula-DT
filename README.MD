@@ -29,6 +29,6 @@ editarlo desde ahi mismo. No se cuán recomendable o práctica puede resultar es
 
 - **Importante:** la página donde aparece el resumen-abstract ya cuenta comienza con la numeración de las páginas, es decir, esa tiene que ser la página 1 del trabajo. En caso de que quieran usar la carátula uniendo dos pdf deben poner que en el otro pdf la numeración comience en la página 2.
 
-Esto se puede hacer de la siguiente manera. Se agrega esta línea en donde comience la primera página del otro documento: 
+- Esto se puede hacer de la siguiente manera. Se agrega esta línea en donde comience la primera página del otro documento: 
 
-<center> \setcounter{page}{2} </center>
+- \setcounter{page}{2}
